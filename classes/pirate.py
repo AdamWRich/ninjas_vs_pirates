@@ -26,5 +26,6 @@ class Pirate:
         if move == Pirate.attack_moves[2]:
             print(f"\n{target.name} used {Pirate.attack_moves[2]}!")
             target.health -= 15
+            return self
         print(f"\n{target.name}'s health is now {target.health}")
         return self

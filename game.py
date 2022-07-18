@@ -4,12 +4,6 @@ import inquirer
 import random
 import time
 
-# michelangelo = Ninja("Michelanglo")
-
-# jack_sparrow = Pirate("Jack Sparrow")
-
-# michelangelo.attack(jack_sparrow)
-# jack_sparrow.show_stats()
 
 class Gameplay:
     attack_success = ["hit", "miss", "self"]
@@ -50,7 +44,7 @@ class Gameplay:
         time.sleep(3)
         enemy_move_accuracy = random.choice(Gameplay.attack_success)
         if enemy_move_accuracy == "hit":
-            target.enemy.attack(target.char, random.choice(target.enemy.attack_moves))
+            target.enemy.attack(target.enemy, random.choice(target.enemy.attack_moves))
         if enemy_move_accuracy == "miss":
             print(f"\nOh no! {target.enemy.name}'s attack missed!")
         if enemy_move_accuracy == "self":
